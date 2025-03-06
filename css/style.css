@@ -1,0 +1,336 @@
+.website{
+    width: 0px;
+    height: 10px;
+    margin: auto;
+    background-color: #a52a2a;
+    /* overflow: hidden; */
+}
+.player{
+    transition: 1s;
+    display: none;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.logo{
+    width: 60px;
+    border-radius: 100%;
+}
+#nav{
+    position: fixed;
+    width: 100%;
+    background-color: #a52a2a;
+    z-index: 100;
+    top: 0%;
+    display: none;
+}
+.nav-link{
+    color: white;
+}
+.slid-row{
+    height: 200px;
+    align-items: center;
+    position: relative;
+}
+.slid-row img{
+    height:200px;
+    width: 80%;
+    object-fit: cover;
+}
+.mopile-child{
+    display: flex;
+    justify-content: end;
+}
+.menu , .fa-circle-play
+{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.input-serch{
+    width:80%;
+    margin: auto;
+
+}
+.serch-icon{
+    transform: translateX(-50%);
+    left: 85%;
+    top: 10px;
+}
+
+.name{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+  .serch-name{
+    width:30%;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .background .arrow{
+    background-color:#80808098;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    border-radius: 100%;
+    display: none;
+  }
+  .background .arrow i{
+    padding: 20px;
+    font-size: 30px;
+    color: brown;
+    animation-name: spped;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+    scroll-behavior: smooth;
+  }
+  @keyframes spped {
+
+    50%{
+        transform: translateY(-10px);
+
+    }
+  }
+  .sc1{
+    margin:100px auto;
+    padding: 15px;
+    position: relative;
+    background-color:rgba(165, 42, 42, 0.678);
+}
+.sc1 .sc1-image{
+    width: 100px;
+    position: absolute;
+    top:-50px;
+    left: -50px;
+    border-radius: 50%;
+}
+  .sc2{
+    width: 100%;
+    background-color:rgba(165, 42, 42, 0.568);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 80px;
+    height: auto;
+    /* display: none; */
+  }
+  .sc2 .hadith-logo{
+    position: absolute;
+    width: 100px;
+    border-radius: 50%;
+    right: -25px;
+    top: -50px;
+  }
+  .reciters-name{
+    margin-bottom: 80px;
+  }
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/dist/image/001.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 0, 0, 0.308);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* swiper slid */
+.swiper-container {
+    width: 80%;
+    height: 250px;
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.video{
+  display: flex;
+  width: 100%;
+  height: 400px;
+  margin-bottom:80px;
+  margin-top: 25px;
+}
+.video video{
+  padding: 10px;
+}
+.date{
+  border: 2px solid brown;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 20px;
+}
+.time-piranr{
+  padding: 15px;
+  margin-top: 20px;
+  background-image: url("/dist/image/time001.jpeg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  border-radius: 20px;
+}
+.time-piranr div{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+.time-piranr div div{
+  padding: 10px;
+  border: 2px solid brown;
+  border-radius: 20px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight:500;
+}
+.azanTime{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* footer */
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: brown;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+#quranLive , #sunaLive{
+  width: 100%;
+  height: 400px;
+  display: none;
+}
+.playVideo{
+  position: absolute;
+  top:50%;
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 50%;
+}
+}
+@media only screen and (max-width: 575px) {
+    .mopile-pirant{
+        flex-direction: column;
+        gap: 3px;
+    }
+    .mopile-child{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .modal{
+        width:100%;
+        margin-left: auto;
+        margin-left: auto;
+    }
+    .serch-name{
+        width:calc(100%/1);
+        border: 2px solid gray;
+        border-radius: 20px;
+        padding: 15px;
+        margin: 10px;
+      }
+      .hadith-logo , .sc1-image {
+        display: none;
+      }
+  }
+  @media (min-width:576px) and (max-width:770px) {
+    .serch-name{
+        width:45%;
+        border: 2px solid gray;
+        border-radius: 20px;
+        padding: 15px;
+        margin: 10px;
+      }
+  }

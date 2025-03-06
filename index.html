@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/livePage.css">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+   <div class="website">
+    <div class="spinner">
+      <span class="loader"></span>
+    </div>
+    <div id="nav"></div>
+    <div class="background">
+      <div class="arrow">
+        <i class="fa-solid fa-arrow-down" onclick="fristScroll()"></i>
+      </div>
+    </div>
+    <!-- slider -->
+<section class="mb-3 sc1 container">
+  <div class="container">
+    <div class="row slid-row">
+      <div class="col-sm-12 col-md-12 col-lg-8 mopile-pirant">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./dist/image/slide1.jpeg"
+                class="rounded mx-auto d-block img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./dist/image/slide2.jpeg"
+                class="rounded mx-auto d-block img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./dist/image/slide3.jpeg"
+                class="rounded mx-auto d-block img-fluid"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./dist/image/slide4.jpeg"
+                class="rounded mx-auto d-block img-fluid"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-sm-12 col-md-12 col-lg-4 mopile-child justify-content-sm-center mt-sm-4"
+      >
+        <button
+          type="button"
+          class="btn btn-outline-light quicGoin"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          الوصول السريع
+        </button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  الوصول السريع
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                class="modal-body d-flex flex-column gap-3 align-items-start"
+              >
+                <select  id="reciter-list">
+                  <option value="">اختر القارئ</option>
+                </select>
+                <select  id="riwayat">
+                  <option value="">اختر المصحف</option>
+                </select>
+                <select  id="surah-list">
+                  <option value="">اختر السورة</option>
+                </select>
+              </div>
+              <div class="d-flex justify-content-end">
+                <span id="go" data-bs-dismiss="modal"
+                  ><i class="fa-solid fa-circle-play p-3 w-25"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="dist/image/quran1.jpeg" alt="photo" class="sc1-image">
+</section>
+
+
+<section class="container sc2">
+<!-- swiper slide -->
+<img src="dist/image/hadith-logo.jpeg" alt="photo" class="hadith-logo">
+<div class="swiper-container">
+  <div class="swiper-wrapper" id="hadithSlider">
+
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+</section>
+
+<section class="sc3 container d-flex justify-content-center align-items-center flex-column position-relative">
+  <div class="container mt-5 serch position-relative">
+    <i class="fa-solid fa-magnifying-glass position-absolute serch-icon"></i>
+    <input type="text" class=" form-control input-serch"  oninput="serch(this.value)" placeholder="ابحث عن القارئ">
+  </div>
+      <div class="container mt-5 reciters-name">
+        <div class="name">
+          </div>
+        </div>
+  
+        <div id="surahContainer"></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+    <div class="fixed-bottom z-1 d-flex justify-content-center adio">
+      <audio src="" controls id="audio" autoplay class="w-75 player"></audio>
+    </div>
+
+    <footer>
+      
+    </footer>
+
+   </div>
+
+
+
+
+
+
+
+
+
+<!-- script -->
+    <script src="javaScript/NavBar.js"></script>
+    <script src="javaScript/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="javaScript/bootstrap.bundle.js"></script>
+    <script src="javaScript/jquery-3.7.1.min.js"></script>
+    <script src="javaScript/main.js"></script>
+  </body>
+</html>
