@@ -78,12 +78,12 @@ $(document).ready(function () {
 
       // إضافة التلاوات إلى القائمة
       finalData.map((recitation) => {
-        let surah = name_arabic.find((s) => s.id === recitation.chapter_id); // البحث عن اسم السورة الصحيح
+        let surah = name_arabic.find((s) => s.id === recitation.chapter_id); // البحث عن اسم السورة 
         let option = document.createElement("option");
         option.value = recitation.audio_url; // وضع رابط الصوت
         option.textContent = `${recitation.chapter_id} - ${
           surah ? surah.name_arabic : "اسم غير متوفر"
-        }`; // إضافة الاسم
+        }`;
         opt.appendChild(option);
       });
       console.log(" تم تحميل السور بنجاح!");
